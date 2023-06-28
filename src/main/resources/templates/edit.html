@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d625a478fd.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+<a href="/customers" class="fs-5">Customer list</a>
+<div class="container-lg mt-4 d-flex">
+    <div class="col-6">
+        <h1>Edit customer</h1>
+        <form th:action="@{/customers/create}" th:object="${customer}" method="post" class="form-control">
+            <table class="table table-bordered table-light mt-4">
+                <tr>
+                    <td>Username:</td>
+                    <td><input class="form-control" type="text" th:field="*{username}"/></td>
+                </tr>
+                <tr>
+                    <td>Full name:</td>
+                    <td><input class="form-control" type="text" th:field="*{fullName}"/></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input class="form-control" type="email" th:field="*{email}"/></td>
+                </tr>
+                <tr>
+                    <td>Avatar:</td>
+                    <td><input class="form-control" type="text" th:field="*{avatar}"/></td>
+                </tr>
+                <tr class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        List address:
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li th:each="address: ${customer.addresses}"
+                            th:text="${address.street + ', ' + address.city + ', ' + address.country}"></li>
+                    </ul>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" class="btn btn-primary" value="Update customer"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div class="col-6">
+        <h1>Add address</h1>
+        <form th:action="@{/customers/add-address/__${customer.id}__}" th:object="${address}" method="post"
+              class="form-control">
+            <table class="table table-bordered table-light mt-4">
+                <tr>
+                    <td>Street:</td>
+                    <td><input class="form-control" type="text" th:field="*{street}"/></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input class="form-control" type="text" th:field="*{city}"/></td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td><input class="form-control" type="text" th:field="*{country}"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" class="btn btn-primary" value="Add Address"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</div>
+<div class="d-flex justify-content-center mt-4">
+    <a th:href="@{/products}">
+        <button class="btn btn-lg btn-warning">Let go shopping</button></a>
+</div>
+</body>
+</html>
