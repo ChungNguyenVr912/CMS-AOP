@@ -6,3 +6,26 @@
 2023-06-28 17:00:48,092 +0700 [http-nio-8080-exec-9] INFO  (MyLogger.java:19) - New customer created!
 2023-06-28 17:01:03,484 +0700 [http-nio-8080-exec-10] INFO  (MyLogger.java:19) - New customer created!
 2023-06-28 17:01:25,152 +0700 [http-nio-8080-exec-1] INFO  (MyLogger.java:19) - New customer created!
+2023-06-28 22:32:29,679 +0700 [http-nio-8080-exec-6] ERROR (MyLogger.java:31) - [CMS] Exception: CustomerService.save[com.cms_aop.model.Customer@38b82259]: Invalid argument!
+
+2023-06-28 22:32:29,682 +0700 [http-nio-8080-exec-6] INFO  (MyLogger.java:23) - New customer created!
+2023-06-28 22:34:29,516 +0700 [http-nio-8080-exec-3] ERROR (MyLogger.java:31) - [CMS] Exception: CustomerService.save[com.cms_aop.model.Customer@3652d5cd]: Invalid argument!
+
+2023-06-28 22:34:29,518 +0700 [http-nio-8080-exec-3] INFO  (MyLogger.java:23) - New customer created!
+2023-06-28 23:08:26,646 +0700 [http-nio-8080-exec-3] INFO  (MyLogger.java:29) - Customer Customer{username='nhunhoinhoi', fullName='Nhu rat nhoi', email='nhu@gmail.com'} updated!
+2023-06-28 23:11:30,737 +0700 [http-nio-8080-exec-8] INFO  (MyLogger.java:29) - Customer Customer{username='huyvuairlines', fullName='Huy Pink', email='huypink@gmail.com'} updated!
+2023-06-28 23:17:44,669 +0700 [http-nio-8080-exec-4] INFO  (MyLogger.java:29) - Customer Customer{username='JuliaPerry668@pay0s.com', fullName='Chung Phùng Phát', email='cpp@gmail.com'} updated!
+2023-06-28 23:25:15,386 +0700 [http-nio-8080-exec-7] INFO  (MyLogger.java:32) - Customer Customer{username='longga', fullName='Tat ca la tai Long', email='longga@gmail.com'} updated!
+2023-06-28 23:28:12,458 +0700 [http-nio-8080-exec-6] INFO  (MyLogger.java:32) - Customer Customer{username='hoangnghia', fullName='Hoang Nghia', email='hoangnghia@gmail.com'} updated!
+2023-06-28 23:32:30,806 +0700 [http-nio-8080-exec-5] INFO  (MyLogger.java:32) - Customer Customer{username='thaiocd', fullName='Thai ocd', email='thai@gmail.com'} updated!
+2023-06-28 23:40:48,353 +0700 [http-nio-8080-exec-1] INFO  (MyLogger.java:34) - New customer created! 
+2023-06-29 08:20:58,731 +0700 [http-nio-8080-exec-3] INFO  (MyLogger.java:34) - New customer created! 
+2023-06-29 08:33:13,356 +0700 [http-nio-8080-exec-8] INFO  (MyLogger.java:34) - New customer created! 
+2023-06-29 08:41:58,687 +0700 [http-nio-8080-exec-1] INFO  (MyLogger.java:34) - New customer created! 
+2023-06-29 08:43:57,975 +0700 [http-nio-8080-exec-9] INFO  (MyLogger.java:32) - Customer old updated!
+2023-08-03 18:57:11,645 +0700 [http-nio-8080-exec-10] INFO  (MyLogger.java:31) - Customer old updated!
+2023-08-03 19:01:34,785 +0700 [http-nio-8080-exec-3] INFO  (MyLogger.java:35) - Customer with id: 21 updated!
+2023-08-03 19:06:28,347 +0700 [http-nio-8080-exec-2] INFO  (MyLogger.java:35) - Customer with id: 19 updated!
+2023-08-03 19:07:41,344 +0700 [http-nio-8080-exec-1] INFO  (MyLogger.java:35) - Customer with id: 19 updated!
+2023-08-03 19:09:09,962 +0700 [http-nio-8080-exec-5] INFO  (MyLogger.java:35) - Customer with id: 19 updated!
+2023-08-03 19:09:48,721 +0700 [http-nio-8080-exec-1] INFO  (MyLogger.java:35) - Customer with id: 19 updated!

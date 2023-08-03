@@ -34,4 +34,13 @@ public class Customer {
     @Cascade(CascadeType.ALL)
     private Set<Address> addresses;
     private String avatar;
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "username='" + username + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
